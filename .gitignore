@@ -1,0 +1,25 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.Python
+
+# Pytest cache and reports
+.cache/
+.pytest_cache/
+
+# IDE configs
+.idea/
+*.iml
+
+# Environment / secret configs
+.env
+*.env
