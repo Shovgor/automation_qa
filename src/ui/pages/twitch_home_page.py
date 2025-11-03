@@ -1,6 +1,7 @@
 # src/ui/pages/twitch_home_page.py
 import os
 from dotenv import load_dotenv
+import config
 
 load_dotenv()  # Load environment variables from .env
 
@@ -13,9 +14,8 @@ class TwitchHomePage:
     @staticmethod
     def open_twitch_home_page(browser_context):
         """Opens Twitch homepage and returns a TwitchHomePage instance."""
-        url = os.getenv("TWITCH_URL", "https://www.twitch.tv")
         page = browser_context.new_page()
-        page.goto(url)
+        page.goto(config.TWITCH_URL)
         return TwitchHomePage(page)
 
     def search_streamer(self, streamer_name: str):
