@@ -1,12 +1,16 @@
 import pytest
+
 from src.api.clients.dog_api_client import DogApiClient
 
 
-@pytest.mark.parametrize("endpoint", [
-    "/breeds/list/all",
-    "/breed/hound/images",
-    "/breeds/image/random",
-])
+@pytest.mark.parametrize(
+    "endpoint",
+    [
+        "/breeds/list/all",
+        "/breed/hound/images",
+        "/breeds/image/random",
+    ],
+)
 def test_dog_api_success(endpoint):
     response = DogApiClient().get(endpoint=endpoint)
     assert response.status_code == 200

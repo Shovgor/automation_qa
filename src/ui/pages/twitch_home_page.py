@@ -1,6 +1,8 @@
 # src/ui/pages/twitch_home_page.py
 import os
+
 from dotenv import load_dotenv
+
 import config
 
 load_dotenv()  # Load environment variables from .env
